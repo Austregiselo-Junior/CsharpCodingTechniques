@@ -1,0 +1,11 @@
+﻿Delegados C#
+
+Em C#, delegado é  um tipo que representa referência a método(s) com seu respectivo parâmetro e retorno.
+Para definir um delegado, você usa a delegate palavra-chave e especifica a assinatura do método. Por exemplo: delegate void Greeting(string message);
+Neste caso o Greeting, pode fazer referência a qualquer método que aceite um argumento de string e retorne void.
+
+Porque usar?
+Como os delegados contêm referências aos métodos, você pode passar métodos como argumentos para outros métodos por meio dos delegados. Portanto, os delegados são ideais para definir métodos de retorno de chamada.
+Suponha que você queira definir um método que filtre uma lista de números inteiros com base no resultado de outro método. Para fazer isso, você pode usar um delegado.
+
+Um delegado pode conter referências a vários métodos. Nesse caso, o delegado é chamado de delegado multicast .
