@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstraticClass\Circle.cs" />
+    <Compile Include="AbstraticClass\Rectangle.cs" />
+    <Compile Include="AbstraticClass\Shape.cs" />
     <Compile Include="Interface\ConsoleLogger.cs" />
     <Compile Include="Interface\FileLogger.cs" />
     <Compile Include="Interface\ILogger.cs" />
@@ -55,8 +58,6 @@
   <ItemGroup>
     <Content Include="Anotation.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AbstraticClass\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

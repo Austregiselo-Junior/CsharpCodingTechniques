@@ -1,5 +1,7 @@
-﻿using AbstraticClassXInterface.Interface;
+﻿using AbstraticClassXInterface.AbstraticClass;
+using AbstraticClassXInterface.Interface;
 using System;
+using System.Collections.Generic;
 
 namespace AbstraticClassXInterface
 {
@@ -28,6 +30,28 @@ namespace AbstraticClassXInterface
             {
                 logger = new ConsoleLogger();
                 logger.Log("Logging to console.");
+            }
+            Console.ReadLine();
+
+
+            Console.WriteLine("// ------------------- Classe Abstrata ------------------------//");
+
+            //Neste exemplo, a Shape classe é uma classe abstrata que define dois métodos abstratos GetAreae GetPerimeter. Qualquer
+            //classe herdada da classe Shape precisa implementar esses métodos.
+            //A Shape classe também possui um método concreto Display() que exibe a área e o perímetro de uma forma.
+            //Todas as subclasses da Shapeclasse compartilharão o mesmo Displaymétodo.
+            //As classes Rectangle e Circle estendem a classe Shape.Ambas as classes compartilham a mesma implementação de Displaymétodo,
+            //mas cada uma fornece sua própria implementação de métodos GetAreae GetPerimeter.
+
+            List<Shape> shapes = new List<Shape>
+            {
+                new Rectangle(5, 10),
+                new Circle(7)
+            };
+
+            foreach (var item in shapes)
+            {
+                item.Display();
             }
             Console.ReadLine();
         }
