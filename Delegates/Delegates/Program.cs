@@ -39,6 +39,25 @@ namespace Delegates
             }
             // OBS: Observe que o Filter pode receber o IsEvent() e o Is Odd() porque recebe um delegado como parâmetro onde esses métodos têm a mesma assinatura que o delegado.
             Console.ReadLine();
+
+            Console.WriteLine("// ----------------------- Exemplo 3 ------------------------//");
+
+            //  Um delegado pode ter vários métodos a serem chamados, para adicionar ou remover usamos o += e -=
+            Example3.Greeting greetingWithAssing = Example3.SayHi; // Atribuindo o método SayHi ao delegado Greeting
+            greetingWithAssing("John1"); // Chamando o delegado Greeting, que agora chama SayHi
+            greetingWithAssing -= Example3.SayHi; // Removendo o método SayHi ao delegado Greeting
+
+            greetingWithAssing += Example3.SayBye; // Adicionando o método SayBye ao delegado Greeting
+            greetingWithAssing("John2"); // Chamando o delegado Greeting, que agora chama SayBye
+            greetingWithAssing -= Example3.SayBye; // Removendo o método SayBye ao delegado Greeting
+
+            greetingWithAssing += Example3.Say; // Adicionando o método Say ao delegado Greeting
+            greetingWithAssing("John3"); // Chamando o delegado Greeting, que agora chama Say
+            greetingWithAssing -= Example3.Say; // Removendo o método Say ao delegado Greeting
+
+
+
+            Console.ReadLine();
         }
     }
 }
