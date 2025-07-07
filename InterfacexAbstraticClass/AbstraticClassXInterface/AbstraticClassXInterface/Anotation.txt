@@ -1,0 +1,13 @@
+﻿Classe Abstrata C# e Interface
+
+Escolhendo entre uma classe abstrata e uma interface
+Em C#, uma classe abstrata é semelhante a uma interface . No entanto, a classe abstrata e a interface atendem a propósitos diferentes. 
+Portanto, é importante saber quando usar uma classe abstrata e quando usar uma interface.
+
+Geralmente, quando você deseja modelar o relacionamento é-um e compartilhar uma implementação comum com todas as subclasses, você usa uma classe abstrata.
+
+Mas quando você deseja criar um contrato ao qual outras classes devem aderir, você usa uma interface.
+
+Resumo
+Use uma classe abstrata para modelar um relacionamento é-um e compartilhe uma implementação comum com todas as subclasses.
+Use uma interface para representar um contrato ao qual outras classes devem aderir.
