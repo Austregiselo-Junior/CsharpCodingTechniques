@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Event with data\Email.cs" />
+    <Compile Include="Event with data\Order.cs" />
+    <Compile Include="Event with data\OrderData.cs" />
+    <Compile Include="Event with data\SMS.cs" />
     <Compile Include="Event without data\Email.cs" />
     <Compile Include="Event without data\Order.cs" />
     <Compile Include="Event without data\SMS.cs" />
@@ -55,8 +59,6 @@
   <ItemGroup>
     <Content Include="Anotations.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Event with data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
