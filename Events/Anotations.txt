@@ -1,0 +1,23 @@
+﻿Os eventos permitem que uma classe ou objeto notifique outras classes ou objetos quando algo ocorre.
+
+A classe que gera (ou envia) o evento é chamada de editor .
+As classes que recebem (ou manipulam) o evento são chamadas de assinantes. E o método das classes que manipulam o evento geralmente são chamados de manipuladores de eventos.
+
+Esse padrão é conhecido como publicador/assinante . Nesse padrão, o editor determina quando gerar o evento e os assinantes decidem como lidar com o evento.
+Tecnicamente, um evento tem um delegado encapsulado . Na verdade, um evento é como um simples delegado. Vamos dar um exemplo de uso de eventos.
+
+O código fica desacoplado!!
+
+C# fornece o EventHandlertipo de delegado padrão para que você não precise definir um novo tipo de delegado ao usar eventos.
+
+Exemplo: public delegate void EventHandler(object sender, EventArgs e);
+
+Neste tipo de delegado:
+
+O sender contém uma referência ao objeto que gerou o evento.
+O EventArgs objeto contém as informações de estado que podem ser o que for aplicável ao aplicativo.
+É importante entender que o EventArgs é projetado para manipuladores de eventos que não precisam passar dados do publicador para os assinantes.
+ Se você deseja passar os dados, precisa definir uma classe derivada da EventArgsclasse.
+
+ ---  Evento com passagem de informação:  --
+Para passar dados no segundo parâmetro do manipulador de eventos do publicador para assinantes, você precisa definir uma classe que herda da EventArgsclasse e armazenar os dados que deseja passar na classe.
