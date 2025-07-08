@@ -1,0 +1,24 @@
+﻿Tipos Anônimos:
+Devemos usar tipos anônimos quando devemos criar um objeto com propriedade somente leituta, sem precisar definir uma classe pra isso.
+Assim ecapsulamos propriedade somente leitura em um único objeto, sem definir uma classe.
+
+Por inferência de tipos o compilador infere o tipo do objeto anônimo e os tipos das das propriedades do objeto.
+
+O exemplo a baixo mostra a criação de um tipo anônimo atravé do "new".
+
+var product = new {Name = "Phone X", Price = 99.00};   Observe que não há o tipo especificado como seria numa classe.
+Console.WriteLine($"{product.Name}, {product.Price}")
+
+Se quiser formar um um novo objeto anônimo se usa o "with", A ideia é aproveitar o objeto anônimo já criado., veja o exemplo:
+
+var product = new {Name = "Phone X", Price = 99.00}; 
+Console.WriteLine($"{product.Name}, {product.Price}")
+Saída: Phone X : 99.00
+
+var productX = product with {Price = 1099.00}
+Console.WriteLine($"{productX.Name}, {productX.Price}")
+Saída: Phone X : 1099.00
+
+OBS: Podemos também criar um array te tipos anônimos 
+var product = new[] {{Name = "Phone X", Price = 99.00}, {Name = "Tablet X", Price = 99.00}}; 
+
