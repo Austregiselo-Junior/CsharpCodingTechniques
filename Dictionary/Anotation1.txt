@@ -1,0 +1,5 @@
+﻿A Dictionary<TKey,TValue>classe representa uma coleção de chaves e valores. Pertence ao System.Collections.Generic. Os TKeye TValue são os tipos de chaves e valores no dicionário.
+
+Cada chave em um dicionário deve ser única. Além disso, uma chave não pode ser null se seu tipo for referência. Se uma chave for um objeto, ela não deve ser alterada de forma alguma que afete sua exclusividade (ou valor de hash).
+
+Como o C# é implementa o Dictionary<(TKey, TValue)> como uma tabela hash, recuperar um valor por chave é muito rápido.
