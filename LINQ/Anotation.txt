@@ -1,0 +1,47 @@
+﻿Introdução ao LINQ
+LINQ (Language Integrated Query) é um conjunto de operadores e métodos integrados à linguagem C# que te permite consultar, filtrar, ordenar, transformar e agregar dados de forma clara e concisa.
+
+Ele pode ser usado com:
+
+- List<T>, Array, Dictionary, etc.
+- Entity Framework (consultas a bancos de dados)
+- XML, JSON, DataSet
+- Outras fontes que implementam IEnumerable ou IQueryable
+
+A sintaxe e os operadores do LINQ são como SQL (linguagem de consulta estruturada), mas o LINQ oferece uma abordagem mais segura e orientada a objetos para consultar e gerenciar dados.
+
+LINQ permite que você escreva consultas de duas maneiras:
+
+ - Sintaxe de consulta
+ - Sintaxe do método
+A sintaxe de consulta usa uma sintaxe semelhante a SQL com palavras-chave como from, where, select, orderby, groupby enquanto a sintaxe do método usa um conjunto de métodos de extensão, como Where(), Select(), OrderBy()e GroupBy().
+
+Principais métodos LINQ
+ Método									Descrição
+.Where()								Filtra elementos com base em uma condição
+.Select()								Projeta (transforma) elementos
+.OrderBy()								Ordena em ordem crescente
+.OrderByDescending()					Ordena em ordem decrescente
+.First() / .FirstOrDefault()			Retorna o primeiro elemento
+.Any()									Retorna true se houver pelo menos um item
+.All()									Retorna true se todos os itens satisfazem
+.Count()								Conta os itens
+.Sum() / .Average() / .Max() / .Min()	Operações matemáticas
+
+Atenção:
+
+Métodos como First(), Single(), Last() podem lançar exceção se a coleção estiver vazia. Use FirstOrDefault() para evitar isso.
+Quando usado com bancos de dados (IQueryable), o LINQ é traduzido para SQL, e é importante otimizar a consulta.
+
+
+Sintaxe de consulta (query syntax) – estilo SQL
+var resultado = from item in colecao
+                where item.Condicao
+                orderby item.Algo
+                select item;
+
+Sintaxe de método (method syntax) – estilo fluente
+var resultado = colecao
+                .Where(item => item.Condicao)
+                .OrderBy(item => item.Algo)
+                .Select(item => item);
