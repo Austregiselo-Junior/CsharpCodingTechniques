@@ -1,0 +1,24 @@
+﻿Uma expressão lambda é usada para criar uma função anônima e "=>" é chamado de operador lambda.
+
+Uma expressão lambda pode ter uma de duas formas: expressão lambda e instrução lambda:
+
+Uma expressão lambda tem uma expressão em seu corpo:
+(parameters) => expression
+
+Uma instrução lambda tem um bloco de instruções como seu corpo:
+(parameters) => { statements; }
+
+Neste exemplo, a seguir está uma expressão lambda:
+(int x) => x * x;
+
+ - Parâmetros de uma expressão lambda:
+Se uma expressão lambda não tiver nenhum parâmetro de entrada, você pode usar parênteses vazios (). Por exemplo:
+() => expression;
+
+Se uma expressão lambda tiver exatamente um parâmetro e o compilador C# puder inferir o tipo do parâmetro, você pode omitir os parênteses desta forma:
+Func<T, TResult> lambda = parameter => expression;
+
+Se uma expressão lambda tiver vários parâmetros, você pode usar uma vírgula para separalos
+(p1, p2, p3) => expression;
+
+Fonte: https://www.csharptutorial.net/csharp-tutorial/csharp-lambda-expression/
